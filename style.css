@@ -1,0 +1,461 @@
+/*** OVERORDNET STYLING ****/
+
+/****** Google fonts
+font-family: 'Scope One', serif;
+font-family: 'Sanchez', serif;
+font-family: 'Montserrat', sans-serif;
+**/
+
+@font-face {
+    font-family: 'pecitamedium';
+    src: url('fonte/pecita-webfont.woff2') format('woff2'),
+        url('fonte/pecita-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    margin: 0;
+    background-color: #e8e1d7;
+    position: relative;
+}
+
+.name {
+    font-family: 'pecitamedium';
+    font-size: 2em;
+}
+
+h1 {
+    font-family: 'Sanchez', serif;
+    font-size: 1.5rem;
+
+}
+
+h2 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+
+}
+
+p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    color: black;
+}
+
+
+header {
+    position: fixed;
+    z-index: 1;
+}
+
+img {
+    width: 100%;
+}
+
+/***** FÆLLES BOX MED LINK *****/
+
+
+.ahref {
+    border: 2px #928688 solid;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
+
+.ahref:hover {
+    background-color: #C1B6B4;
+}
+
+/***** FÆLLES MENU *****/
+nav {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: white;
+}
+
+a {
+    color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+/*
+:target {
+    color: black;
+}
+*/
+
+/*** BURGER-MENU ****/
+@media only screen and (max-width:628px) {
+    .hidden {
+        /*    display: none;*/
+        transform: translateX(-110%)
+    }
+
+    #burgermenu {
+        padding: 1vw;
+
+    }
+
+    #menuknap {
+        font-size: 3rem;
+
+    }
+
+    #menu {
+        list-style-type: none;
+        transition: transform 0.7s;
+    }
+
+    #desktopmenu {
+        display: none;
+    }
+
+    /*** DESKTOP MENU ****/
+
+}
+
+@media only screen and (min-width:628px) {
+    #burgermenu {
+        display: none;
+    }
+
+    nav {
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 1rem 0;
+        position: fixed;
+        font-size: 2vw;
+    }
+
+    nav a {
+        /**    border-right: 0.25rem black solid;**/
+        padding: 0 1rem;
+    }
+
+
+    /*
+    nav a:last-child {
+        border-right: none;
+    }
+*/
+
+}
+
+
+
+/**** HERO IMAGE ****/
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+#hero {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* The hero image */
+.hero-image {
+    background-image: url("img/wolfdeer.png");
+
+    /* Set a specific height */
+    height: 100%;
+    width: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 5vw;
+}
+
+/* Place text in the middle of the image
+gammel med wolf only: 20%-55% og stor version: 30%-20%*/
+.hero-text {
+    position: absolute;
+    top: 0;
+    left: 55vw;
+    background-color: rgba(232, 225, 215, 0.85);
+    /*    transform: translate(-50%, -50%);*/
+}
+
+.phero {
+    color: white;
+}
+
+@media only screen and (min-width:820px) {
+    .hero-text {
+        position: absolute;
+        left: 60vw;
+        top: 5vw;
+        background-color: transparent;
+    }
+}
+
+/****** CV SECTION *******/
+
+#cv {
+    position: relative;
+    top: 4vw;
+}
+
+.line img {
+    max-height: 0.1em;
+}
+
+#cv li {
+    list-style-type: none;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 200;
+
+}
+
+#cvfoto {
+    width: 30%;
+    position: relative;
+    left: 35vw;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10vw
+}
+
+.column {
+    flex-basis: 400px;
+    flex-grow: 2;
+}
+
+.sectionwrapper img {
+    max-width: 80%;
+}
+
+
+/****** PROJEKT SECTION *******/
+
+#projektwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container {
+    flex-basis: 150px;
+    flex-grow: 4;
+    margin-top: 10vw;
+    padding: 2vw;
+    position: relative;
+    width: 50%;
+}
+
+@media only screen and (max-width:820px) {}
+
+.projekt {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(232, 225, 215, 0.5);
+    padding: 2vw;
+    pointer-events: none;
+
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    pointer-events: none;
+
+}
+
+@media only screen and (max-width: 628px) {
+    .container {
+        margin-top: 90px;
+    }
+
+    .text {
+        font-size: 1.5rem;
+    }
+}
+
+/*********** PROJEKT SECTION **************/
+
+.temah1 {
+    position: absolute;
+    top: 5vw;
+    left: 2vw;
+}
+
+@media only screen and (max-width: 628px) {
+    .temah1 {
+        margin-top: 40px;
+        left: 59vw;
+    }
+}
+
+#indhold {
+    margin: 0 1vw;
+}
+
+.projektline {
+    margin-top: 8vw;
+    margin-bottom: 3vw;
+}
+
+/*********** GÅ TIL TOP KNAP  **************/
+
+
+#myBtn {
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 20px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #928688;
+    /* Set a background color */
+    color: black;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 1rem;
+    /* Some padding */
+    border-radius: 3px;
+    /* Rounded corners */
+    font-size: 0.8rem;
+    /* Increase font size */
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.myBtn {
+    display: none;
+    /* Hidden by default */
+}
+
+#myBtn:hover {
+    background-color: #C1B6B4;
+    /* Add a dark-grey background on hover */
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+/*********** 01: WEBDESIGN  **************/
+
+.projektwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#webdesignwrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.webcolumn {
+    flex-basis: 300px;
+    flex-grow: 3;
+    padding: 1vw;
+}
+
+.projektimg {
+    max-width: 70%;
+}
+
+.responsimg {
+    max-width: 45%;
+}
+
+/*********** 02: CONTENT  **************/
+
+.video video {
+    max-width: 95%;
+}
+
+@media only screen and (min-width: 750px) {
+
+    .video video {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .video video {
+        width: 950%;
+    }
+}
+
+
+.concolumn_wide {
+    flex-basis: 550px;
+    flex-grow: 2;
+    padding: 1vw;
+}
+
+.concolumn_narrow {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 1vw;
+}
+
+.column {
+    flex-basis: 300px;
+    flex-grow: 3;
+    padding: 1vw;
+}
+
+.nyopgave {
+    margin-top: 10vw;
+}
