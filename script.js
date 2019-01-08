@@ -33,7 +33,8 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    console.log("Scroll funtion");
+    if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
         document.querySelector("#myBtn").classList.add("show");
         document.querySelector("#myBtn").classList.remove("myBtn");
     } else {
@@ -45,6 +46,7 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
+    console.log("Top function");
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }

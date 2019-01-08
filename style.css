@@ -300,7 +300,6 @@ gammel med wolf only: 20%-55% og stor version: 30%-20%*/
     font-weight: 300;
     font-size: 2rem;
     pointer-events: none;
-
 }
 
 @media only screen and (max-width: 628px) {
@@ -529,8 +528,8 @@ gammel med wolf only: 20%-55% og stor version: 30%-20%*/
 
     .sexogsamfsprite {
         background-size: 400% 100%;
-        width: 25vw;
-        height: 50vw;
+        width: 30vw;
+        height: 60vw;
         background-image: url(img/SVG/Artboard%201.svg);
         margin-left: 30vw;
     }
