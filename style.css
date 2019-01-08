@@ -265,8 +265,6 @@ gammel med wolf only: 20%-55% og stor version: 30%-20%*/
     width: 50%;
 }
 
-@media only screen and (max-width:820px) {}
-
 .projekt {
     display: block;
 }
@@ -311,7 +309,11 @@ gammel med wolf only: 20%-55% og stor version: 30%-20%*/
     }
 
     .text {
-        font-size: 3rem;
+        font-size: 2rem;
+    }
+
+    .overlay {
+        opacity: 1;
     }
 }
 
