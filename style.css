@@ -213,6 +213,7 @@ gammel med wolf only: 20%-55% og stor version: 30%-20%*/
 #cv {
     position: relative;
     top: 4vw;
+    margin-bottom: 5vw;
 }
 
 .line img {
