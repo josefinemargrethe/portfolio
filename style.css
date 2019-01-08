@@ -131,7 +131,6 @@ html {
 #hero {
     height: 100%;
     width: 100%;
-    position: relative;
 }
 
 /* The hero image */
@@ -146,14 +145,12 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: absolute;
-    top: 5vw;
 }
 
 .hero-text {
     position: absolute;
     top: 0;
-    left: 55vw;
+    left: 62vw;
     background-color: rgba(232, 225, 215, 0.85);
     /*    transform: translate(-50%, -50%);*/
 }
@@ -167,7 +164,7 @@ html {
 /****** CV SECTION *******/
 
 #cv {
-    position: relative;
+    position: absolute;
     top: 4vw;
     margin-bottom: 5vw;
 }
@@ -462,6 +459,15 @@ html {
         padding: 0 1rem;
     }
 
+    /*** placering af tekst til hero-image ****/
+
+    .hero-text {
+        position: absolute;
+        left: 60vw;
+        top: 5vw;
+        background-color: transparent;
+    }
+
     /*** få bokse med temaer ned fra toppen ****/
 
     .container {
@@ -501,14 +507,4 @@ html {
         margin-left: 8vw;
     }
 
-}
-
-
-@media only screen and (min-width:820px) {
-    .hero-text {
-        position: absolute;
-        left: 60vw;
-        top: 5vw;
-        background-color: transparent;
-    }
 }
